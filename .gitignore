@@ -67,3 +67,5 @@ fabric.properties
 
 # Other
 .idea/vcs.xml
+venv/
+*/__pycache__/
