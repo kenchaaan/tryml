@@ -44,7 +44,3 @@ def calculate_n_generation(initial_x, n_range, h):
         else:
             arr.append(x)
     return arr
-
-
-# x = np.arange(0, 1, 0.01)
-# out_csv(data=x, file='sin.csv')
