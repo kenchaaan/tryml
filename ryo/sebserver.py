@@ -21,4 +21,4 @@ def get_prediction():
     return str(lr.predict(data['x']))
 
 
-app.run(port=8080, debug=True)
+# app.run(port=8080, debug=True)

@@ -71,3 +71,5 @@ venv/
 */__pycache__/
 */.ipynb_checkpoints
 *.iml
+ryo/static/*.csv
+ryo/static/*.png
