@@ -5,7 +5,7 @@ metadata:
   labels:
     app: ryo
 spec:
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       name: ryo
@@ -15,7 +15,7 @@ spec:
       containers:
         - name: ryo
           image: kenchaaan/ryo
-          imagePullPolicy: IfNotPresent
+          #imagePullPolicy: IfNotPresent
       restartPolicy: Always
   selector:
     matchLabels:
