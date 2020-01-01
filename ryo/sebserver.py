@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
-from ryo.make_samples import MakeSamples
-from ryo.linear_regression import LinearRegression
+from make_samples import MakeSamples
+from linear_regression import LinearRegression
 
 app = Flask(__name__)
 
@@ -21,4 +21,4 @@ def get_prediction():
     return str(lr.predict(data['x']))
 
 
-# app.run(port=8080, debug=True)
+#app.run(port=8080, debug=True)

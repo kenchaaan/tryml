@@ -34,10 +34,10 @@ class LinearRegression:
         plt.plot(x, y)
         plt.plot(x, data_training[:, 1], 'o')
         # plt.show()
-        plt.savefig('static/view.png')
+        plt.savefig('/tmp/view.png')
 
     def do_train(self):
-        arr = self.read_csv('static/sample.csv')
+        arr = self.read_csv('/tmp/sample.csv')
         w_vec = self.train(arr)
         self.plot(w_vec, arr)
 

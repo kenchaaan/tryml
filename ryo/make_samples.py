@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+import os
 
 
 class MakeSamples:
@@ -12,7 +13,7 @@ class MakeSamples:
     def to_csv(self):
         arr = self.make_sample(2, 3)
         df = pd.DataFrame(arr)
-        df.to_csv('static/sample.csv', index=None)
+        df.to_csv('/tmp/sample.csv', index=None)
 
 
 if __name__ == '__main__':
