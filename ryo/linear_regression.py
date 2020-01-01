@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import copy
+import os, sys
 
 
 class LinearRegression:
@@ -34,10 +35,11 @@ class LinearRegression:
         plt.plot(x, y)
         plt.plot(x, data_training[:, 1], 'o')
         # plt.show()
-        plt.savefig('/tmp/view.png')
+        plt.savefig(os.path.dirname(__file__) + '/static/view.png')
+        print(os.path.dirname(__file__))
 
     def do_train(self):
-        arr = self.read_csv('/tmp/sample.csv')
+        arr = self.read_csv(os.path.dirname(__file__) + '/static/sample.csv')
         w_vec = self.train(arr)
         self.plot(w_vec, arr)
 

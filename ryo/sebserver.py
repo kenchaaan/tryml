@@ -21,4 +21,5 @@ def get_prediction():
     return str(lr.predict(data['x']))
 
 
-#app.run(port=8080, debug=True)
+if __name__ == '__main__':
+    app.run(port=8080, debug=True)
