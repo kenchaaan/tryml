@@ -21,3 +21,9 @@ curl -X POST -H "Content-Type: application/json" \
     -d '{"x": 2}' \
     localhost:8080/api
 ```
+
+# k8s
+
+```
+kubectl apply -f ryo-deployment.yaml
+```
