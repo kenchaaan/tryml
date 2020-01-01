@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ryo
+  labels:
+    app: ryo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: ryo
+      labels:
+        app: ryo
+    spec:
+      containers:
+        - name: ryo
+          image: kenchaaan/ryo
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: ryo
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ryo-svc
+spec:
+  selector:
+    app: ryo
+  ports:
+    - port: 8080
+  type: ClusterIP
